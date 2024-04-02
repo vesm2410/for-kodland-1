@@ -46,6 +46,15 @@ async def on_message(message):
         else:
             count_spam = 5
         await message.channel.send("buenasque" * count_spam)
+    elif message.content.startswith("$meme"):
+        num1al5 = (random.randint(1,5))
+        meme_ = open(f"MemeForKodland/memes/meme{num1al5}kodland.png", "rb")
+        meme = discord.File(meme_)
+        await message.channel.send(file=meme)
+    elif message.content.startswith("$meme cleo"):
+        meme_ = open(f"MemeForKodland/memes/meme5kodland.png", "rb")
+        meme = discord.File(meme_)
+        await message.channel.send(file=meme)
 #    else:
 #        await message.channel.send("a")
 
